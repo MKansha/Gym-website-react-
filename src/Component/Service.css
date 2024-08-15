@@ -1,0 +1,165 @@
+/* General Styles */
+.class-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem;
+}
+
+.class-image {
+    position: relative;
+    overflow: hidden; /* Ensure images don't overflow their container */
+}
+
+.class-image .img-1,
+.class-image .img-2 {
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.class-image .img-1 {
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+}
+
+.class-image .img-2 {
+    width: 100%;
+    max-width: 300px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.class-image:hover .img-1 {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.class-image:hover .img-2 {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.class-content {
+    padding: 2rem;
+    text-align: center; /* Center text on larger screens */
+    background: rgba(0, 0, 0, 0.5); /* Slight background for readability */
+    border-radius: 10px;
+}
+
+.class-content h2 {
+    margin-bottom: 1rem;
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.class-content h2 span {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px var(--white);
+}
+
+.class-content p {
+    margin-bottom: 2rem;
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.class-content .btn {
+    padding: 12px 20px;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.class-content .btn:hover {
+    background-color: var(--primary-color-dark);
+}
+
+/* Responsive Styles */
+
+/* For screens smaller than 1400px */
+@media only screen and (max-width: 1400px) {
+    .class-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* For screens smaller than 1059px */
+@media only screen and (max-width: 1059px) {
+    .class-image .img-2 {
+        position: relative;
+        bottom: auto;
+        left: auto;
+    }
+}
+
+/* For screens smaller than 924px */
+@media only screen and (max-width: 924px) {
+    .class-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .class-image .img-2 {
+        position: relative;
+        margin-top: 1rem; /* Margin to prevent excessive spacing */
+    }
+
+    .class-content {
+        padding: 1.5rem;
+    }
+}
+
+/* For screens smaller than 664px */
+@media only screen and (max-width: 664px) {
+    .class-container {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .class-image .img-1,
+    .class-image .img-2 {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 0.5rem;
+    }
+
+    .class-content {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .class-content p {
+        margin-bottom: 1rem;
+    }
+}
+
+/* For screens smaller than 498px */
+@media only screen and (max-width: 498px) {
+    .class-container {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .class-image .img-1,
+    .class-image .img-2 {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .class-content {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .class-content p {
+        margin-bottom: 1rem;
+    }
+}

@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: rgb(226, 55, 68);
+    --primary-color-dark: rgb(192, 51, 62);
+    --primary-color-light: rgb(203, 63, 75);
+    --primary-color-extra-light: rgba(225, 79, 92, 0.853);
+    --secondary-color: #111317;
+    --secondary-color-light: #1f2125;
+    --secondary-color-extra-light: #35373b;
+    --text-light: #d1d5db;
+    --white: #ffffff;
+    --max-width: 1200px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+html, body {
+    height: 100%; /* Ensure html and body take up full height */
+}
+
+.body5 {
+    background: url('https://wallpaperaccess.com/full/460852.jpg');
+    background-size: cover;
+    backdrop-filter: blur(10px);
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    height: 100vh; /* Ensure full viewport height for centering */
+    margin: 0; /* Remove default margin */
+}
+
+.box {
+    background: #fafafa;
+    width: 500px;
+    height: auto; /* Adjusted to auto for dynamic content height */
+    text-align: center;
+    border-radius: 1rem;
+    padding: 20px;
+}
+
+.box h1 {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.content {
+    padding: 0 20px;
+}
+
+.input, .inputH, .inputW, .gender {
+    background: #fff;
+    box-shadow: 0px 0px 80px -20px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    padding: 15px 20px; /* Adjusted padding for uniformity */
+    margin-bottom: 15px;
+}
+
+.input label, .inputH label, .inputW label {
+    display: block;
+    font-size: 16px; /* Adjusted font size for consistency */
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.input input, .inputH input, .inputW input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--primary-color-light);
+    width: 100%; /* Adjusted to 100% to fit container */
+    text-align: center;
+    font-size: 24px;
+    font-family: "Nunito", sans-serif;
+    padding: 5px; /* Added padding for better input aesthetics */
+}
+
+.gender {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center;
+    gap: 10px; /* Added gap between radio buttons */
+    background: #fff;
+    box-shadow: 0px 0px 80px -20px rgba(0, 0, 0, 0.15); /* Adjusted shadow */
+    border-radius: 12px;
+    padding: 15px 20px; /* Adjusted padding */
+    margin-bottom: 15px; /* Adjusted margin */
+}
+
+.gender .container {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Adjusted gap between radio button and label */
+    cursor: pointer;
+    font-size: 18px; /* Adjusted font size for consistency */
+}
+
+.gender .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gender .container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.gender .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.gender .container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkmark:after {
+    top: 4px; /* Centering dot within the checkmark */
+    left: 4px; /* Centering dot within the checkmark */
+    width: 8px; /* Adjusted size for better visibility */
+    height: 8px; /* Adjusted size for better visibility */
+    border-radius: 50%;
+    background: white;
+}
+
+.calculate {
+    width: 100%; /* Adjusted width to fit container */
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    font-size: 18px;
+    font-weight: 500;
+    margin: 15px 0; /* Adjusted margin for spacing */
+    border-radius: 12px;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.res2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.res1 p {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.res1 .result {
+    background-color: var(--primary-color);
+    width: auto; /* Adjusted to auto for dynamic content */
+    padding: 8px 12px; /* Added padding for better appearance */
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.res2 .result {
+    margin: 5px 0 0 0;
+}

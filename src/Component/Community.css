@@ -1,0 +1,229 @@
+.review {
+    background-color: var(--secondary-color-light);
+}
+
+.review-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.review-container > span {
+    font-size: 6rem;
+    color: var(--primary-color);
+    opacity: 0.5;
+}
+
+.review-content {
+    flex: 1;
+}
+
+.review-content h4 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.review-content p {
+    max-width: 800px;
+    margin-bottom: 2rem;
+    color: var(--text-light);
+}
+
+.review-content span {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.review-footer {
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.review-member {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.review-member img {
+    max-width: 80px;
+    border-radius: 100%;
+}
+
+.review-member-details h4 {
+    margin-bottom: 0;
+}
+
+.review-nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.review-nav span {
+    font-size: 2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.footer-conatiner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    background-color:black;
+}
+
+.footer-blur {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.footer-logo {
+    max-width: 150px;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-col p {
+    margin-bottom: 2rem;
+    color: var(--text-light);
+}
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-socials a {
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 100%;
+    transition: 0.3s;
+}
+
+.footer-socials a:hover {
+    color: var(--white);
+    background-color: var(--primary-color);
+}
+
+.footer-col h4 {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+.footer-col > a {
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+    transition: 0.3s;
+}
+
+.footer-col > a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bar {
+    width: 100% !important;
+    /* max-width: var(--max-width); */
+    margin: auto;
+    padding: 0.8rem;
+    font-size: 0.8rem;
+    color: var(--white);
+    background-color: #343a40; /* Dark grey background for footer bar */
+    text-align: center;
+}
+
+/* Media Query for Tablets and Small Desktops */
+@media only screen and (max-width: 1059px) {
+    .footer-conatiner {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .review-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 664px) {
+    .footer-conatiner {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .review-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .footer-logo {
+        max-width: 120px;
+    }
+}
+/* Media Query for Specific Mobile Devices (363px width) */
+@media only screen and (max-width: 363px) {
+    .review-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem; /* Reduce gap for small screens */
+    }
+
+    .review-container > span {
+        font-size: 3rem; /* Adjust font size for better fit */
+    }
+
+    .review-content {
+        padding: 0.5rem; /* Reduce padding for small screens */
+        max-width: 100%; /* Ensure content uses full width */
+    }
+
+    .review-content h4 {
+        font-size: 1.2rem; /* Adjust font size for better readability */
+    }
+
+    .review-content p {
+        font-size: 0.8rem; /* Adjust font size for better readability */
+    }
+
+    .review-footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem; /* Space between elements */
+    }
+
+    .review-member {
+        margin-bottom: 1.5rem; /* Space between member details and navigation */
+        text-align: center; /* Center text */
+    }
+
+    .review-member img {
+        max-width: 60px; /* Adjust image size for small screens */
+    }
+
+    .review-nav {
+        margin-top: 1rem; /* Space above navigation */
+    }
+
+    .review-nav span {
+        font-size: 1.5rem; /* Adjust font size for navigation icons */
+    }
+}

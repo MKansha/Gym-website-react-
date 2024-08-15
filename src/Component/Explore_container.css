@@ -1,0 +1,125 @@
+.card {
+    height: 280px;
+    width: 300px; 
+    border: solid var(--primary-color) 8px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 30px; 
+}
+
+.container {
+    margin-top: 1rem;
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid with auto-fill */
+    gap: 2rem; /* Space between grid items */
+    justify-content: center;
+}
+.section-header
+{
+    margin-bottom: 1rem;
+    font-size: 2.25rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--white);
+}
+
+.card-image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    
+}
+.card-body {
+    height: 100%;
+    width: 100%;
+    background-color: var(--primary-color-extra-light);
+    position: absolute;
+    top: 0;
+    right: -100%;
+    backdrop-filter: blur(3px);
+    border-radius: 6px;
+    color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    transition: 500ms ease-in-out;
+}
+
+.card-title {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.5rem; 
+    margin-bottom: 0.5rem; 
+}
+
+.sub h2 {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    color: #111317;
+    font-weight: 800;
+    margin-bottom: 1rem; 
+}
+
+.info {
+    font-size: 1.1rem; 
+    line-height: 1.5; 
+    margin-bottom: 1rem; 
+    color: #ffffff;
+}
+
+.card:hover .card-body {
+    right: 0;
+}
+
+.btn1{
+    padding: 10px 15px;
+    outline: none;
+    border: none;
+    font-size:10px;
+    color: #ffffff;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ;
+}
+.btn1:hover{
+    transform: scale(1.1);
+}
+.explore_nav{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: flex-end;
+
+}
+.explore_nav span{
+    padding: 0 6px;
+    font-size: 1.5rem;
+    color: var(--white);
+    border: 2px solid var(--white);
+    cursor: pointer;
+    border-radius: 100%;
+    transition: 0.3s;
+}
+.explore_nav span:hover{
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.section-container
+{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 3rem;
+}
+@media only screen and (width>1454px)
+{
+    
+    .container {
+         grid-template-columns: repeat(4, minmax(300px, 1fr)); ;
+    }
+}
